@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 
-const char* WIFI_SSID = "BEBENGUKLSKK";
-const char* PASS = "12345678A";
+const char* WIFI_SSID = "BEBENGUKLSKK"; //user ssid
+const char* PASS = "12345678A";   //pass wifi
 void setup()
 {
   Serial.begin(115200);
@@ -9,7 +9,7 @@ void setup()
 
   WiFi.begin(WIFI_SSID, PASS);
 
-  Serial.print("Connecting");
+  Serial.print("Menyambungkan");
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(500);
@@ -17,7 +17,7 @@ void setup()
   }
   Serial.println();
 
-  Serial.print("Connected, IP address: ");
+  Serial.print("Tersambung, IP address: ");
   Serial.println(WiFi.localIP());
 }
 void loop() {}
