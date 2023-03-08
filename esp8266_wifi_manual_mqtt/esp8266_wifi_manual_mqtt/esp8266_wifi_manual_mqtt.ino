@@ -9,11 +9,11 @@
 const char* WIFI_SSID = "Yaa";
 const char* WIFI_PASS = "987654321";
 
-const char *TOPIC = "SensorSuhu";  // Topic to subcribe to
-const char* mqtt_server = "broker.hivemq.com"; 
-const char* mqtt_user = "a";
-const char* mqtt_pass= "a";
-const char* CL = "LSKK";
+const char *TOPIC = "sensorsuhu";  // Topic UNTUK MEMASUKAN PESAN
+const char* mqtt_server = "rmq2.pptik.id"; 
+const char* mqtt_user = "/surveyworkshop:surveyworkshop";
+const char* mqtt_pass= "survvy23!";
+const char* CL = "TEST1"; //otomatis membuat que pada rmq, jangan lupa di bind ke topic
 int KondisiLed = 1;
 
 WiFiClient espClient;
@@ -37,7 +37,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
   if (response == "HIDUPKAN LAMPU")
   {
-    Serial.println("LAMPU HIDUP");
+      Serial.println("LAMPU HIDUP");
     KondisiLed = 0;
   }
 }
