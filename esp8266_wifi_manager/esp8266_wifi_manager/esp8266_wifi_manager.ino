@@ -54,7 +54,7 @@ void loop (){
   char dataTopump[50];
   datasoilpump.toCharArray(dataTopump, sizeof(dataTopump));
   client.publish(mqtt_cl, dataTopump);
-  if(datasoil < 422){
+  if(datasoil < 400){
   digitalWrite(D4, HIGH);
    }else{
    digitalWrite(D4, LOW); 
